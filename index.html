@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Samyak— Portfolio</title>
+  <meta name="description" content="Portfolio of Your Name — projects, skills, certifications, contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous"></script>
+  <!-- If you don't have a Font Awesome kit, below we use CDN fallback -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <!-- Animated background -->
+    <div class="bg-shapes" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <a href="#" aria-label="Your Name Home"><span>Portfolio</span></a>
+        </div>
+        <nav class="nav" id="mainNav">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certs">Certifications</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero container" id="home">
+      <div class="hero-left">
+        <h1>Hi, I'm <span id="displayName">Samyak Makde </span></h1>
+        <p class="lead">Cyber Security,Penetration Tester  — Hunting Web, CTF .<br>
+        Currently working on <strong id="workingOn">a OSINT Threat Intelligence Automation System </strong>.</p>
+
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn outline" href="#contact">Contact me</a>
+        </div>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/samyak-1221872a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://x.com/samyak9857?t=MC0pEK5KfHYs5qe9IGqJjg&s=09" target="_blank" aria-label="X (Twitter)">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="https://github.com/Sam9857"target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="profile-card">
+          <img src="assets/placeholder.jpg" alt="Your Name photo" class="profile-img" />
+          <div class="profile-info">
+            <h3>Samyak Makde </h3>
+            <p class="muted">Cyber Security</p>
+            <ul class="meta">
+            <li><strong>Email:</strong><a href="mailto:you@example.com">samyakworkk@gmail.com</a></li>
+            <li><strong>Location:</strong> Nagpur, India</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Motivated Penetration Tester Intern with a
+background in creating real-world solutions within
+the cybersecurity domain. Developed a
+comprehensive web vulnerability scanner that
+generates detailed reports to enhance system
+security. Seeking to leverage skills in Python and
+cybersecurity practices to contribute effectively in a
+penetration testing role.
+</p>
+          <p><strong>Education:</strong> GH Raisoni College Of Arts,Commerce And Science ,BCA,2026</p>
+        </div>
+        <div class="about-list">
+          <h3>Currently working on</h3>
+          <p id="workingDesc">A Python-based OSINT Threat Intelligence System that collects data from public sources, correlates mentions and leaks, flags suspicious domains/IPs, generates alerts, and displays results in an interactive threat-report dashboard..</p>
+
+          <h3>Certifications</h3>
+          <ul id="certList" class="clean-list">
+            <li>CNSP - Certified Network Security Practioner (2025)</li>
+            <li>CAPIE - Certified API  (2025)</li>
+            <li>VAPT - Vulnerability Assesment Penetration Testing </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="container section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h4>Linux</h4>
+          <div class="bar"><div class="bar-fill" data-fill="95%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Python (Basic)</h4>
+          <div class="bar"><div class="bar-fill" data-fill="85%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>Web Hunting </h4>
+          <div class="bar"><div class="bar-fill" data-fill="75%"></div></div>
+        </div>
+        <div class="skill">
+          <h4>CTF Player </h4>
+          <div class="bar"><div class="bar-fill" data-fill="70%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project card example -->
+      
+            <h3>Project Alpha</h3>
+            <p>Basic Web Vulnerability Scanner written in Python. It tests a given URL for common security issues like XSS, SQL Injection, CSRF, and Remote Code Execution by sending crafted payloads and analyzing the server's response.</p>
+            <p class="muted"><strong>Role:</strong> Tester </p>
+            <div class="project-links">
+              <a href="https://github.com/Sam9857/WebVulnScanner01" target="_blank"><i class="fa fa-external-link"></i> Live</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Add more project-card elements like above -->
+      </div>
+    </section>
+
+    <section id="certs" class="container section">
+      <h2>Certifications & Achievements</h2>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <h4>CAPIE- Certified API Hacking Expert </h4>
+          <p>Issuing body — Year(2025)</p>
+        </div>
+        <div class="cert-card">
+          <h4>CNSP - Certifies Network Security Practioner </h4>
+          <p>Issuing body — 2025r</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <form class="contact-form" id="contactForm" action="#" onsubmit="return handleContact(event)">
+          <label>
+            Samyak .M.
+            <input type="text" id="cfName" required>
+          </label>
+          <label>
+            samyakworkk@gmail.com
+            <input type="email" id="cfEmail" required>
+          </label>
+          <label>
+            Message
+            <textarea id="cfMsg" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send</button>
+            <button class="btn outline" type="button" onclick="openMail()">Email me</button>
+          </div>
+          <p class="muted">This form is client-side only. Use your own backend or <a href="mailto:you@example.com">send an email</a>.</p>
+        </form>
+
+        <aside class="contact-aside">
+          <h3>Get in touch</h3>
+          <p>If you prefer social, use the icons at the top or email me at <a href="mailto:you@example.com">samyakworkk@gmail.com</a>.</p>
+          <ul class="clean-list">
+            <li><strong>Availability:</strong> Open to work / Freelance</li>
+            <li><strong>Preferred:</strong> Remote / Hybrid</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="site-footer container">
+      <p>© <span id="year"></span> Samyak .M. </p>
+    </footer>
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
