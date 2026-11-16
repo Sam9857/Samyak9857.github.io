@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samyak Makde | Penetration Tester &amp; Cybersecurity Enthusiast</title>
+  <meta name="description" content="Samyak Makde — Penetration Tester and Cybersecurity Enthusiast. Bug bounty hunter and active CTF player focused on web application security, vulnerability assessment and ethical hacking.">
+  <meta name="theme-color" content="#0a0c0f">
+  <meta property="og:title" content="Samyak Makde | Penetration Tester">
+  <meta property="og:description" content="Breaking systems to build security. Bug Bounty Hunter · Active CTF Player.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ===== SVG icon sprite (inline, no dependencies) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+    <symbol id="i-bug" viewBox="0 0 24 24"><path d="m8 2 1.88 1.88M14.12 3.88 16 2M9 7.13v-1a3 3 0 1 1 6 0v1"/><path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6zM12 20v-9M6.53 9C4.6 8.8 3 7.1 3 5M6 13H2M3 21c0-2.1 1.7-3.9 3.8-4M20.97 5c0 2.1-1.6 3.8-3.5 4M22 13h-4M17.2 17c2.1.1 3.8 1.9 3.8 4"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3M12 12V8"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4zM22 2 11 13"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.9 17 22l-5-3-5 3 1.5-8.1"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05a3.75 3.75 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+  </defs>
+</svg>
+<style>
+  svg use { pointer-events: none; }
+  svg[data-i] { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="container">
+    <a href="#home" class="brand" aria-label="Samyak Makde — home">
+      <img src="assets/img/logo-shield-sm.png" alt="" width="34" height="42">
+      <span class="brand-text">Samyak Makde<small>// pentester</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg data-i aria-hidden="true"><use href="#i-menu"/></svg>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#ctf">CTF</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home" aria-labelledby="hero-name">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-grid"></div><div class="hero-glow"></div><div class="hero-glow g2"></div></div>
+  <div class="container">
+    <div class="hero-copy">
+      <p class="prompt"><span>root@samyak:~$</span> whoami</p>
+      <h1 id="hero-name">Samyak <em>Makde</em></h1>
+      <p class="hero-title"><b>Penetration Tester</b><span class="sep">|</span>Cybersecurity Enthusiast</p>
+      <p class="tagline">“Breaking systems to build security.”<span class="caret" aria-hidden="true"></span></p>
+
+      <div class="badges" aria-label="Professional highlights">
+        <span class="badge badge-bounty"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-bug"/></svg></span>Bug Bounty Hunter</span>
+        <span class="badge badge-ctf"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-flag"/></svg></span>Active CTF Player</span>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="assets/docs/Samyak_Makde_Resume.pdf" download>
+          <svg data-i aria-hidden="true"><use href="#i-download"/></svg>Download Resume</a>
+        <a class="btn btn-ghost" href="#contact"><svg data-i aria-hidden="true"><use href="#i-mail"/></svg>Contact Me</a>
+      </div>
+      <div class="socials">
+        <a class="social" href="https://github.com/Sam9857" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg data-i aria-hidden="true"><use href="#i-github"/></svg></a>
+        <a class="social" href="https://www.linkedin.com/in/samyak-m-1221872a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg data-i aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+      </div>
+    </div>
+
+    <div class="id-card">
+      <div class="id-frame">
+        <div class="id-mono">
+          <img src="assets/img/logo-shield.png" alt="Samyak Makde personal logo — shield with an eye, 'I Pwned You'" width="90" height="110">
+          <p class="mono">// SECURITY RESEARCHER</p>
+        </div>
+        <!-- Drop your photo at assets/img/profile.jpg — it will automatically cover this panel. -->
+        <img class="photo" src="assets/img/profile.jpg" alt="Portrait of Samyak Makde" onerror="this.remove()">
+      </div>
+      <div class="id-tag">status: learning<span>nagpur · india</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">01 · About</p>
+      <h2 class="section-title" id="about-title">Offensive mindset, defensive purpose.</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="about-copy">
+        <p class="term">&gt; profile loaded</p>
+        <p>I’m a <strong>penetration tester and cybersecurity enthusiast</strong> from Nagpur who focuses on finding weaknesses before attackers do. My work centres on <strong>web application security, vulnerability assessment and ethical hacking</strong>, backed by hands-on internship experience across penetration testing and cybercrime support at <strong>Cyber Cell, Nagpur Police</strong>.</p>
+        <p>I build my own security tooling in Python — including a web vulnerability scanner and my in-progress threat detection system, <strong>Bit Sentinel</strong> — and sharpen my skills through <strong>bug bounty hunting</strong> and <strong>Capture The Flag competitions</strong>.</p>
+        <div class="edu">
+          <b>BCA — GH Raisoni College of Arts, Science &amp; Commerce, Nagpur</b>
+          <span>2023 – 2026 · Active participant in SIH 2024, SIH 2025 and college hackathons</span>
+        </div>
+      </div>
+      <ul class="focus-list" aria-label="Areas of focus">
+        <li>Penetration Testing</li>
+        <li>Web Application Security</li>
+        <li>Vulnerability Assessment</li>
+        <li>Ethical Hacking</li>
+        <li>Bug Bounty Hunting</li>
+        <li>Capture The Flag Competitions</li>
+        <li>Cybersecurity Research</li>
+      </ul>
+    </div>
+
+    <div class="grid grid-2 pillars reveal">
+      <article class="card pillar bounty">
+        <div class="head"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-bug"/></svg></span>
+          <div><p class="kicker">Identity</p><h3>Bug Bounty Hunter</h3></div></div>
+        <ul>
+          <li>Responsible vulnerability discovery and disclosure</li>
+          <li>Web application security testing</li>
+          <li>A persistent security-testing mindset</li>
+        </ul>
+      </article>
+      <article class="card pillar ctf">
+        <div class="head"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-flag"/></svg></span>
+          <div><p class="kicker">Identity</p><h3>Active CTF Player</h3></div></div>
+        <ul>
+          <li>Participates in Capture The Flag competitions</li>
+          <li>Hands-on cybersecurity challenges</li>
+          <li>Continuous technical learning</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section-alt" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">02 · Skills</p>
+      <h2 class="section-title" id="skills-title">Toolkit.</h2>
+      <p class="section-sub">Tools and techniques I work with, grouped by discipline.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-target"/></svg></span><h3>Offensive Security</h3></div>
+        <div class="chip-row"><span class="chip">Ethical Hacking</span><span class="chip">Metasploit</span><span class="chip">Kali Linux</span><span class="chip">OSINT</span><span class="chip">Vulnerability Research</span></div>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-globe"/></svg></span><h3>Web Application Security</h3></div>
+        <div class="chip-row"><span class="chip">Burp Suite</span><span class="chip">OWASP ZAP</span><span class="chip">XSS</span><span class="chip">SQL Injection</span><span class="chip">Web Hunting</span></div>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-shield"/></svg></span><h3>Penetration Testing</h3></div>
+        <div class="chip-row"><span class="chip">VAPT</span><span class="chip">Vulnerability Assessment</span><span class="chip">Bug Bounty</span><span class="chip">CTF Challenges</span></div>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-network"/></svg></span><h3>Networking</h3></div>
+        <div class="chip-row"><span class="chip">Nmap</span><span class="chip">Wireshark</span><span class="chip">Traffic Analysis</span></div>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-wrench"/></svg></span><h3>Security Tools</h3></div>
+        <div class="chip-row"><span class="chip">Burp Suite</span><span class="chip">Nmap</span><span class="chip">Wireshark</span><span class="chip">Metasploit</span><span class="chip">OWASP ZAP</span><span class="chip">TryHackMe</span><span class="chip">HackTheBox</span></div>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-code"/></svg></span><h3>Programming &amp; Scripting</h3></div>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">Bash</span><span class="chip">PowerShell</span><span class="chip">Git / GitHub</span></div>
+      </article>
+      <article class="card skill-card reveal">
+        <div class="top"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-monitor"/></svg></span><h3>Operating Systems</h3></div>
+        <div class="chip-row"><span class="chip">Linux</span><span class="chip">Kali Linux</span><span class="chip">Linux Command Line</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience" aria-labelledby="exp-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">03 · Experience</p>
+      <h2 class="section-title" id="exp-title">Where I’ve worked.</h2>
+    </div>
+    <div class="timeline">
+
+      <article class="t-item current reveal">
+        <div class="card t-card">
+          <div class="logo-tile"><img src="assets/img/cybercell.webp" alt="Cyber Cell Nagpur Police logo" width="48" height="48" loading="lazy"></div>
+          <div>
+            <div class="t-meta"><h3>Cyber Cell, Nagpur Police</h3><span class="t-date">Aug 2025 – Sep 2025 · Onsite, Nagpur</span></div>
+            <p class="t-role">Cyber Ambassador</p>
+            <ul>
+              <li>Assisted in resolving victim issues related to various cybercrime cases</li>
+              <li>Supported officers in filling and organising cybercrime complaints</li>
+              <li>Helped with documentation, data collection and preliminary analysis in cybercrime cases</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="t-item reveal">
+        <div class="card t-card">
+          <div class="logo-tile"><img src="assets/img/deltaware.webp" alt="Deltaware Solutions logo" width="48" height="48" loading="lazy"></div>
+          <div>
+            <div class="t-meta"><h3>Deltaware Solutions Pvt. Ltd.</h3><span class="t-date">Jun 2025 – Aug 2025 · Online</span></div>
+            <p class="t-role">Penetration Tester (Intern)</p>
+            <ul>
+              <li>Completed an internship focused on practical cybersecurity and vulnerability assessment</li>
+              <li>Developed a Python web vulnerability scanner under expert guidance</li>
+              <li>Implemented checks for common vulnerabilities and analysed server responses for security flaws</li>
+              <li>Strengthened hands-on skills in web security, scanning techniques and secure coding practices</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="t-item reveal">
+        <div class="card t-card">
+          <div class="logo-tile"><img src="assets/img/technohacks.webp" alt="TechnoHacks EduTech logo" width="48" height="48" loading="lazy"></div>
+          <div>
+            <div class="t-meta"><h3>TechnoHacks EduTech</h3><span class="t-date">Aug 2024 – Jan 2025 · Online</span></div>
+            <p class="t-role">Cybersecurity Intern</p>
+            <ul>
+              <li>Performed sniffing attacks with Wireshark to capture and analyse network traffic</li>
+              <li>Conducted Nmap scans to identify open ports and assess network vulnerabilities</li>
+              <li>Completed XSS testing with Burp Suite to detect and exploit client-side flaws</li>
+              <li>Gained hands-on experience in practical cybersecurity techniques and vulnerability assessment</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section-alt" aria-labelledby="proj-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">04 · Projects</p>
+      <h2 class="section-title" id="proj-title">Things I’m building.</h2>
+    </div>
+
+    <!-- Featured: Bit Sentinel -->
+    <article class="card project-feature reveal" aria-labelledby="bs-title">
+      <div class="pf-main">
+        <span class="status"><i aria-hidden="true"></i>IN DEVELOPMENT</span>
+        <h3 id="bs-title">Bit Sentinel – Threat Detection System</h3>
+        <p class="sub">// real-time log analysis &amp; threat prevention dashboard</p>
+        <p>A Flask-based security dashboard that ingests server logs and live traffic, flags attacks using signature and behavioural analysis, scores every IP from 0–100, and can automatically block malicious sources. Results stream to the dashboard in real time.</p>
+        <p>The behavioural engine is deliberately <strong>rule-based and explainable</strong>: each verdict comes with a plain-English reason, so every decision is auditable.</p>
+
+        <ul class="feat-list">
+          <li>Signature detection for SQL injection, XSS and path traversal</li>
+          <li>Behavioural detection of brute force and high-frequency / DDoS-style traffic</li>
+          <li>Weighted 0–100 risk score with explainable reasoning</li>
+          <li>Auto-block engine with configurable threshold, plus whitelist &amp; blacklist</li>
+          <li>Per-IP sliding-window rate limiter</li>
+          <li>Log upload (.log / .txt / .csv) — Apache/Nginx &amp; simple formats</li>
+          <li>Live monitor: simulation, self-tap and log-tail modes</li>
+          <li>Server-Sent Events dashboard, IP detail view, JSON report export</li>
+        </ul>
+
+        <div class="chip-row" aria-label="Technologies">
+          <span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Server-Sent Events</span><span class="chip">REST API</span><span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">JSON storage</span><span class="chip">Gunicorn</span>
+        </div>
+        <p class="dev-note">$ git status → work in progress. Features and architecture are still evolving.</p>
+      </div>
+
+      <aside class="pf-side" aria-label="Detection pipeline overview">
+        <div class="term-window">
+          <div class="term-bar"><i></i><i></i><i></i><span>detection-pipeline</span></div>
+<pre class="term-body" style="margin:0"><span class="c"># how an event flows through Bit Sentinel</span>
+<span class="b">source</span>  → upload · simulate · self-tap · log-tail
+<span class="b">parse</span>   → Apache/Nginx · simple log lines
+<span class="b">detect</span>  → SQLi · XSS · path traversal
+<span class="b">behave</span>  → brute force · high frequency
+<span class="b">score</span>   → 0–100 composite risk
+<span class="b">act</span>     → auto-block · whitelist · rate-limit
+<span class="b">stream</span>  → SSE → live dashboard</pre>
+        </div>
+        <div class="score-legend" aria-label="Risk levels">
+          <span class="pill safe">0–30 SAFE</span><span class="pill sus">31–60 SUSPICIOUS</span><span class="pill dan">61–100 DANGER</span>
+        </div>
+      </aside>
+    </article>
+
+    <div class="grid">
+      <article class="card project-card reveal" style="display:flex;flex-direction:column">
+        <div class="p-top">
+          <span class="p-ico"><svg data-i aria-hidden="true" width="26" height="26" style="color:var(--cyan)"><use href="#i-search"/></svg></span>
+          <span class="chip">GitHub</span>
+        </div>
+        <h3>OSINT Threat Detection Dashboard</h3>
+        <p>“I Pwned You” is an OSINT (Open Source Intelligence) threat detection platform designed for cybersecurity education, SOC training and real-world learning. It provides automated reconnaissance while emphasising human analyst validation and professional OSINT methodology.</p>
+        <div class="chip-row"><span class="chip">Python</span><span class="chip">Scapy</span><span class="chip">Wireshark</span></div>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/Sam9857/ipwnedyou" target="_blank" rel="noopener noreferrer">View on GitHub <svg data-i aria-hidden="true"><use href="#i-external"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTF ===================== -->
+<section id="ctf" aria-labelledby="ctf-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">05 · Competitions</p>
+      <h2 class="section-title" id="ctf-title">CTF Participation &amp; Achievements</h2>
+      <p class="section-sub">Capture The Flag competitions are where I practise offensive techniques under pressure — web, crypto, forensics and beyond.</p>
+    </div>
+
+    <div class="ctf-banner reveal">
+      <div class="txt">
+        <span class="ico"><svg data-i aria-hidden="true"><use href="#i-flag"/></svg></span>
+        <div><b>Active CTF Player</b><span>Hands-on challenges · continuous learning · competing regularly</span></div>
+      </div>
+      <div class="ctf-count"><strong>3</strong><span>competition<br>certificates</span></div>
+    </div>
+
+    <div class="grid grid-3">
+      <article class="card cert-ctf reveal">
+        <span class="flag-ico"><svg data-i aria-hidden="true"><use href="#i-flag"/></svg></span>
+        <p class="type">CTF · Participation</p>
+        <h3>Certificate of Participation in Bypass CTF</h3>
+        <p class="src">Issued via Unstop</p>
+        <a class="btn btn-ghost btn-sm" href="https://unstop.com/certificate-preview/c7447fff-1242-4563-a2a8-c2f7320ed365" target="_blank" rel="noopener noreferrer" aria-label="View certificate: Bypass CTF (opens in a new tab)">View Certificate <svg data-i aria-hidden="true"><use href="#i-external"/></svg></a>
+      </article>
+      <article class="card cert-ctf reveal">
+        <span class="flag-ico"><svg data-i aria-hidden="true"><use href="#i-flag"/></svg></span>
+        <p class="type">CTF · Participation</p>
+        <h3>Certificate of Participation in EnigmaXplore 3.0 (Capture The Flag) – TantraFiesta’25</h3>
+        <p class="src">Issued via Unstop</p>
+        <a class="btn btn-ghost btn-sm" href="https://unstop.com/certificate-preview/e3a5fb0e-812e-45a2-a239-2a75c09469a7" target="_blank" rel="noopener noreferrer" aria-label="View certificate: EnigmaXplore 3.0 CTF, TantraFiesta 2025 (opens in a new tab)">View Certificate <svg data-i aria-hidden="true"><use href="#i-external"/></svg></a>
+      </article>
+      <article class="card cert-ctf reveal">
+        <span class="flag-ico"><svg data-i aria-hidden="true"><use href="#i-flag"/></svg></span>
+        <p class="type">CTF · Certificate</p>
+        <h3>Certificate of SECLEAF CTF</h3>
+        <p class="src">Hosted on Kommodo</p>
+        <a class="btn btn-ghost btn-sm" href="https://kommodo.ai/i/hcqLRbOk6f86GxRljTeT" target="_blank" rel="noopener noreferrer" aria-label="View certificate: SECLEAF CTF (opens in a new tab)">View Certificate <svg data-i aria-hidden="true"><use href="#i-external"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CERTIFICATIONS ===================== -->
+<section id="certifications" class="section-alt" aria-labelledby="cert-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">06 · Certifications</p>
+      <h2 class="section-title" id="cert-title">Credentials.</h2>
+    </div>
+    <div class="grid grid-2">
+      <article class="card cert-card reveal">
+        <div class="cert-thumb dark"><svg data-i aria-hidden="true" width="28" height="28" style="color:var(--cyan)"><use href="#i-award"/></svg></div>
+        <div>
+          <h3>CNSP</h3><p class="full">Certified Network Security Practitioner</p>
+        </div>
+        <div class="cert-img"><a href="assets/img/cnsp.webp" target="_blank" rel="noopener noreferrer" aria-label="Open CNSP certificate image in a new tab"><img src="assets/img/cnsp.webp" alt="CNSP — Certified Network Security Practitioner certificate" width="640" height="442" loading="lazy"></a></div>
+      </article>
+      <article class="card cert-card reveal">
+        <div class="cert-thumb dark"><svg data-i aria-hidden="true" width="28" height="28" style="color:var(--cyan)"><use href="#i-award"/></svg></div>
+        <div>
+          <h3>CRTA</h3><p class="full">Certified Red Team Analyst</p>
+        </div>
+        <div class="cert-img"><a href="assets/img/crta.webp" target="_blank" rel="noopener noreferrer" aria-label="Open CRTA certificate image in a new tab"><img src="assets/img/crta.webp" alt="CRTA — Certified Red Team Analyst certificate" width="640" height="448" loading="lazy"></a></div>
+      </article>
+      <article class="card cert-card reveal">
+        <div class="cert-thumb dark"><svg data-i aria-hidden="true" width="28" height="28" style="color:var(--green)"><use href="#i-shield"/></svg></div>
+        <div><h3>VAPT</h3><p class="full">Vulnerability Assessment &amp; Penetration Testing</p></div>
+      </article>
+      <article class="card cert-card reveal">
+        <div class="cert-thumb dark"><svg data-i aria-hidden="true" width="28" height="28" style="color:var(--green)"><use href="#i-bug"/></svg></div>
+        <div><h3>CAPIE</h3><p class="full">Certified API Hacking Expert</p></div>
+      </article>
+      <article class="card cert-card reveal">
+        <div class="cert-thumb dark"><svg data-i aria-hidden="true" width="28" height="28" style="color:var(--text-dim)"><use href="#i-award"/></svg></div>
+        <div><h3>McKinsey Forward Program</h3><p class="full">Alumni</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">07 · Contact</p>
+      <h2 class="section-title" id="contact-title">Let’s talk security.</h2>
+      <p class="section-sub">Open to penetration testing roles, internships, bug bounty collaboration and CTF teams.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="card">
+        <h3>Get in touch</h3>
+        <div class="contact-list">
+          <div class="c-row"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:samyakworkk@gmail.com">samyakworkk@gmail.com</a></div></div>
+          <div class="c-row"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-phone"/></svg></span><div><small>Phone</small><a href="tel:+918421265108">+91 84212 65108</a></div></div>
+          <div class="c-row"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-pin"/></svg></span><div><small>Location</small><span>Nagpur, Maharashtra, India</span></div></div>
+          <div class="c-row"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-linkedin"/></svg></span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/samyak-m-1221872a1/" target="_blank" rel="noopener noreferrer">samyak-m-1221872a1</a></div></div>
+          <div class="c-row"><span class="ico"><svg data-i aria-hidden="true"><use href="#i-github"/></svg></span><div><small>GitHub</small><a href="https://github.com/Sam9857" target="_blank" rel="noopener noreferrer">Sam9857</a></div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Send a message</h3>
+        <form id="contactForm" style="margin-top:1.2rem" novalidate>
+          <div><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
+          <div><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="cf-msg">Message</label><textarea id="cf-msg" name="message" required></textarea></div>
+          <button class="btn btn-primary" type="submit"><svg data-i aria-hidden="true"><use href="#i-send"/></svg>Send message</button>
+          <p class="form-note" id="formNote" role="status">Opens your email app with the message pre-filled.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-brand"><img src="assets/img/logo-shield-sm.png" alt="" width="24" height="29"><span>© <span id="year">2026</span> Samyak Makde</span></div>
+    <span>Breaking systems to build security.</span>
+    <a href="#home">↑ Back to top</a>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
